@@ -1,8 +1,9 @@
-.mainunit-dialog-content {
+.mainunit-dialog-contentss {
     display: flex;
     flex-direction: row; /* Default to row layout */
     gap: 16px;
-    height: 600px;
+    overflow: auto; /* This will allow content to adjust dynamically without forcing a scrollbar */
+    max-height: 100%; 
     width: 850px; /* Space between left and right columns */
 }
 

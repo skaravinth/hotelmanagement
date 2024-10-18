@@ -30,7 +30,7 @@ export default function UnitDialog() {
         <Dialog fullWidth maxWidth="md" sx={{ marginTop: '30px' }} onClose={handleClose} open={open}>
             <DialogTitle>Unit Details</DialogTitle>
             <DialogContent>
-                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} className="mainunit-dialog-content">
+                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} className="mainunit-dialog-contentss">
                     {/* Left Side - Image and Unit Info */}
                     <Box className="mainunit-info" flex={1} padding={2}>
                         {/* Image List */}
@@ -87,7 +87,7 @@ export default function UnitDialog() {
                     </Box>
 
                     {/* Right Side - Pricing Details */}
-                    <Box className="mainunit-pricing-details" flex={1} padding={2}>
+                    <Box className="mainunit-pricing-details" flex={1} padding={2}height={'85%'}>
                         <Typography variant="h6" className="mainunit-pricing-title">Unit Pricing Details</Typography>
                         <Box className="mainunit-pricing-list">
                             <Box className='mainunit-pricing-names'>
@@ -98,7 +98,7 @@ export default function UnitDialog() {
                                     </Box>
                                 ))}
                             </Box>
-                            <Box className="mainunit-pricing-total" sx={{ border: '1px solid #ccc', padding: 1, marginTop: 30, borderRadius: '5px', backgroundColor: '#E4E8EE' }}>
+                            <Box className="mainunit-pricing-total" sx={{ border: '1px solid #ccc', padding: 1, marginTop: 22, borderRadius: '5px', backgroundColor: '#E4E8EE' }}>
                                 <Typography variant="body1">Final Total</Typography>
                                 <Typography variant="h6">$1,200</Typography>
                             </Box>
