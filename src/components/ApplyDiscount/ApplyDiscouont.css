@@ -1,0 +1,104 @@
+.mainunit-dialog-content {
+    display: flex;
+    flex-direction: row; /* Default to row layout */
+    gap: 16px;
+    height: 600px;
+    
+   /* Space between left and right columns */
+}
+
+.mainunit-info, .mainunit-pricing-details {
+    flex: 1; /* Allow both columns to grow equally */
+    /* Inner padding for both sections */
+    /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+  /* Soft shadow for depth */
+}
+
+.mainunit-pricing-details {
+    background-color: #f9f9f9;
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mainunit-title {
+    font-weight: bold;
+    font-size: 1.5rem; /* Larger font size for the title */
+    margin-top: 8px;
+    color: #333; /* Darker color for better readability */
+}
+
+.mainunit-subtitle {
+    font-size: 1rem; /* Subtitle size */
+    color: #666; /* Grey color for subtitle */
+    margin-bottom: 12px; /* Space below subtitle */
+}
+
+.mainunit-details {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    color: grey;
+    justify-content: space-between;
+    margin-right: 20px; /* Space above the details */
+}
+
+.mainunit-details span {
+    margin-right: 16px; /* Space between details */
+    font-size: 0.9rem; /* Font size for details */
+    color: #555; /* Slightly lighter color */
+}
+
+.mainunit-img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Slight rounding for images */
+}
+
+.mainunit-pricing-title {
+    font-weight: bold;
+    font-size: 1.5rem; /* Larger font size for pricing title */
+    margin-bottom: 12px; /* Space below title */
+}
+
+.mainunit-pricing-list {
+   /* Space above the pricing list */
+}
+
+.mainunit-pricing-itemss {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0; /* Padding for pricing items */
+    border-bottom: 1px solid #ccc; /* Divider for items */
+}
+
+.mainunit-pricing-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 8px; /* Space above total */
+    padding-top: 8px; /* Padding above total */
+}
+.discount-input {
+    width: 65px;
+    padding: 8px;
+    border: none;
+    font-size: 14px;
+    border-radius: 0;
+    
+}
+
+.discount-select {
+    padding: 8px;
+    border: none;
+    border-left: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.discount-input-section input:focus, 
+.discount-select:focus {
+    outline: none;
+}
+

@@ -89,7 +89,7 @@
     width: 100%;
     color: #98A0AC;
     display: flex;
-    justify-content: space-between;
+    
     font-size: 15px;
 }
 .estate-customise{
@@ -100,4 +100,14 @@
     justify-content: space-evenly;
     font-weight: 600;
     align-items: center;
+   
 }
+.leaddetail-dot {
+    width: 6px; /* Width of the dot */
+    height: 6px; /* Height of the dot */
+    background-color: #98A0AC; /* Color of the dot */
+    border-radius: 50%; /* This makes it a circle */
+    display: inline-block; /* Ensures the dot behaves like a small element */
+    margin-right: 5px; /* Optional spacing if you need */
+  }
+  

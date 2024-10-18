@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid2'; // Import Grid correctly
 import Typography from '@mui/material/Typography'; // Import Typography correctly
 import Sidebar from '../components/Sidebar';
@@ -13,6 +14,7 @@ import Quantity from '../components/QuantityDetails/Qutationdetails';
 
 
 function Home() {
+ 
   return (
     <div>
       <Grid container sx={{height:"100vh",width:"100%"}}>
@@ -43,7 +45,7 @@ function Home() {
                   </Box>
                   <Box sx={{width:"100%",height:"90%",display:"flex"}}>
                     <Box bgcolor="#ffffff" sx={{height:"100%",width:"30%"}}><Leaddetails/></Box>
-                    <Box bgcolor="#f6f8fa" sx={{height:"100%",width:"40%"}}><Unitdetails/></Box>
+                    <Box bgcolor="#f6f8fa" sx={{height:"100%",width:"40%"}} ><Unitdetails /></Box>
                     
                     <Box bgcolor="#ffffff" sx={{height:"100%",width:"30%",padding:'16px'}}> <Box marginBottom={'20px'}>  <Typography>Quatation</Typography></Box><Quantity/></Box>                    
                    
