@@ -102,11 +102,11 @@ export default function UnitDialog() {
                     </Box>
 
                     {/* Right Side - Pricing Details */}
-                    <Box className="mainunit-pricing-details" flex={1} padding={2} sx={{height:'85%',display:'flex',flexDirection:'column',gap:'20px',width:'380px'}}>
+                    <Box className="mainunit-pricing-details" flex={1} padding={2} sx={{height:'75%',display:'flex',flexDirection:'column',gap:'20px',width:'380px'}}>
                     <Box >
                         <Typography variant="h6" className="mainunit-pricing-title">Unit Pricing Details</Typography>
                         <Box className="mainunit-pricing-list">
-                            <Box sx={{height:'400px'}}>
+                            <Box sx={{height:'350px'}}>
                             <Box className='mainunit-pricing-names'>
                                 {pricingItems.map((item) => (
                                     <Box key={item.id} className="mainunit-pricing-item" sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -142,12 +142,12 @@ export default function UnitDialog() {
   sx={{ 
     border: '1px solid #ccc', 
     padding: 1, 
-    marginBottom:3, 
+    
     borderRadius: '5px', 
     backgroundColor: '#E4E8EE',
-    position: 'relavtive',   // Sticky positioning
-    bottom: 0,            // Sticks to the bottom of the container when scrolling
-    zIndex: 1,            // Ensures it remains on top
+       // Sticky positioning
+               // Sticks to the bottom of the container when scrolling
+              // Ensures it remains on top
   }}
 >
     <Typography variant="body1">Final Total</Typography>

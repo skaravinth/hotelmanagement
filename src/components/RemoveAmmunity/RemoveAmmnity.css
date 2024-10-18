@@ -3,7 +3,8 @@
     flex-direction: row; /* Default to row layout */
     gap: 16px;
     height: 600px;
-    width: 850px; /* Space between left and right columns */
+    width: 850px;
+     /* Space between left and right columns */
 }
 
 .mainunit-info, .mainunit-pricing-details {
@@ -71,10 +72,4 @@
     border-bottom: 1px solid #ccc; /* Divider for items */
 }
 
-.mainunit-pricing-total {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    margin-top: 8px; /* Space above total */
-    padding-top: 8px; /* Padding above total */
-}
+

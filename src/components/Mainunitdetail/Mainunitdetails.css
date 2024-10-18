@@ -7,7 +7,7 @@
     width: 850px; /* Space between left and right columns */
 }
 
-.mainunit-info, .mainunit-pricing-details {
+.mainunit-info {
     flex: 1; /* Allow both columns to grow equally */
     padding: 16px; /* Inner padding for both sections */
     /* Light background for contrast */
