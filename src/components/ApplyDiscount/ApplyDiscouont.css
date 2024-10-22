@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: row; /* Default to row layout */
     gap: 16px;
-    height: 630px;
+    height: 580px;
     
    /* Space between left and right columns */
 }
 
 .mainunit-info, .mainunit-pricing-details {
-    flex: 1; /* Allow both columns to grow equally */
+/* Allow both columns to grow equally */
     /* Inner padding for both sections */
     /* Light background for contrast */
     border-radius: 8px; /* Rounded corners */
@@ -44,40 +44,39 @@
 }
 
 .mainunit-details span {
-    margin-right: 16px; /* Space between details */
-    font-size: 0.9rem; /* Font size for details */
-    color: #555; /* Slightly lighter color */
+    margin-right: 16px; 
+    font-size: 0.9rem; 
+    color: #555; 
 }
-
 .mainunit-img {
-    width: 100%; /* Ensure images are responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 4px; /* Slight rounding for images */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 .mainunit-pricing-title {
     font-weight: bold;
-    font-size: 1.5rem; /* Larger font size for pricing title */
-    margin-bottom: 12px; /* Space below title */
+    font-size: 1.5rem; 
+    margin-bottom: 12px; 
 }
 
 .mainunit-pricing-list {
-   /* Space above the pricing list */
+
 }
 
 .mainunit-pricing-itemss {
     display: flex;
     justify-content: space-between;
-    padding: 7px 0; /* Padding for pricing items */
-    border-bottom: 1px solid #ccc; /* Divider for items */
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc; 
 }
 
 .mainunit-pricing-total {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin-top: 8px; /* Space above total */
-    padding-top: 8px; /* Padding above total */
+    margin-top: 8px; 
+    padding-top: 8px; 
 }
 .discount-input {
     width: 65px;

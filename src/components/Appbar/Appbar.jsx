@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, InputBase, IconButton, Avatar, Box, Menu, 
 import { Search, Notifications, ArrowDropDown } from '@mui/icons-material';
 import logo from '../../assets/DNT Logo White-04@2x.png'
 import Filter from '../Filter/Filter'
+import img from '../../assets/Outdoors-man-portrait_(cropped).jpg'
 
 const AppBarComponent = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,10 +19,10 @@ const AppBarComponent = () => {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: '#333',height:'58px' }}>
       <Toolbar>
-        {/* Logo and Title */}
+      
         <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
           <img
-            src={logo} // Replace this with the logo URL
+            src={logo} 
             alt="Logo"
             style={{ marginRight: 16,width:'115px',height:'22px' }}
           />
@@ -30,7 +31,7 @@ const AppBarComponent = () => {
           </Typography>
         </Box>
 
-        {/* Search Bar */}
+   
         <Box sx={{ display: 'flex', alignItems: 'center', backgroundColor: '#444', borderRadius: 1, padding: '0 13px', marginRight: 20 }}>
           <Search sx={{ color: '#fff' ,marginRight:'20px'}} />
           <InputBase
@@ -40,16 +41,16 @@ const AppBarComponent = () => {
           />
         </Box>
 
-        {/* Notification Icon */}
+      
         <IconButton color="inherit" sx={{marginTop:'10px'}}>
           <Filter/>
         </IconButton>
 
-        {/* Profile Section */}
+     
         <Box sx={{ display: 'flex', alignItems: 'center',borderLeft:'2px solid white' }}>
           <Avatar
             alt="Bala Ganesh"
-            src="https://via.placeholder.com/40" // Replace this with the avatar URL
+            src={img}
             sx={{ marginLeft: 2 }}
           />
           <Box sx={{display:'flex',flexDirection:'column'}}>

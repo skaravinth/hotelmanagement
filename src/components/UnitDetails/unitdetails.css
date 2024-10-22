@@ -1,6 +1,7 @@
 .units-container{
     width: 93%;
     height: 90%;
+    
     overflow: hidden;
     margin-top: 20px;
     margin-left: 24px;
@@ -18,6 +19,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    margin-top: 15px;
+    border-radius: 7px 7px 0 0 ;
     padding: 3% 0% 3% 0%;
 }
 .unit-all-estates::-webkit-scrollbar{
@@ -73,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     color: #091B29;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 .unit-estate-subdetails{
@@ -93,13 +96,14 @@
     font-size: 15px;
 }
 .estate-customise{
-    width: 40%;
+    width: 160px;
     color: #5078E1;
     font-size: 14px;
     display: flex;
     justify-content: space-evenly;
     font-weight: 600;
     align-items: center;
+    z-index: 1000;
    
 }
 .leaddetail-dot {

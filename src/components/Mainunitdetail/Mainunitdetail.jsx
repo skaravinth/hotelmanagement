@@ -20,29 +20,28 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 export default function UnitDialog() {
     const [open, setOpen] = useState(true);
-    
-    // Function to handle dialog close
+
     const handleClose = () => {
-        setOpen(false); // Close the dialog
+        setOpen(false); 
     };
 
     return (
         <Dialog fullWidth maxWidth="md" sx={{ marginTop: '30px' }} onClose={handleClose} open={open}>
             <DialogTitle>Unit Details</DialogTitle>
             <DialogContent>
-                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} className="mainunit-dialog-contentss">
-                    {/* Left Side - Image and Unit Info */}
+                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} className="mainunit-dialog-contentsss">
+                
                     <Box className="mainunit-info" flex={1} padding={2}>
-                        {/* Image List */}
+                     
                         <Box className='mainunit-img-contain'>
                             <ImageList
-                                sx={{ width: '400px', height: 205 }}
+                                sx={{ width: '400px', height: 205,borderRadius:'10px' }}
                                 variant="quilted"
                                 cols={4}
                                 rowHeight={100}
                             >
                                 {itemData.map((item) => (
-                                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                                    <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} style={{ margin: '0px' }}>
                                         <img
                                             {...srcset(item.img, 100, item.rows, item.cols)}
                                             alt={item.title}
@@ -53,28 +52,28 @@ export default function UnitDialog() {
                                 ))}
                             </ImageList>
                         </Box>
-                        <Typography className="mainunit-title">Jumeirah Estate</Typography>
-                        <Typography variant="body1" className="mainunit-subtitle">Rubix Apartment, K Tower, Floor 1</Typography>
+                        <Typography className="mainunit-titles">Jumeirah Estate</Typography>
+                        <Typography  className="mainunit-subtitles">Rubix Apartment, K Tower, Floor 1</Typography>
                         <Box className="mainunit-details">
                             <Box display="flex" alignItems="center" marginBottom={1}>
-                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px' }} />
-                                <HotelOutlinedIcon style={{ marginRight: '4px', color: 'black' }} />
-                                <span>2</span>
+                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px',color:'#CED3DD' }} />
+                                <HotelOutlinedIcon style={{ marginRight: '4px', color: '#CED3DD' }} />
+                                <span style={{color:'#4E5A6B',fontWeight:'bold'}}>2</span>
                             </Box>
                             <Box display="flex" alignItems="center" marginBottom={1}>
-                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px' }} />
-                                <BathtubOutlinedIcon style={{ marginRight: '4px', color: 'black' }} />
-                                <span>2</span>
+                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px',color:'#CED3DD' }} />
+                                <BathtubOutlinedIcon style={{ marginRight: '4px', color: '#CED3DD' }} />
+                                <span  style={{color:'#4E5A6B',fontWeight:'bold'}}>2</span>
                             </Box>
                             <Box display="flex" alignItems="center" marginBottom={1}>
-                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px' }} />
-                                <Home style={{ marginRight: '4px', color: 'black' }} />
-                                <span>2BHK</span>
+                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px',color:'#CED3DD' }} />
+                                <Home style={{ marginRight: '4px', color: '#CED3DD' }} />
+                                <span  style={{color:'#4E5A6B',fontWeight:'bold'}}>2BHK</span>
                             </Box>
                             <Box display="flex" alignItems="center" marginBottom={1}>
-                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px' }} />
-                                <SelectAllIcon style={{ marginRight: '4px', color: 'black' }} />
-                                <span>2000 Sq.Ft</span>
+                                <CircleIcon style={{ height: '10px', width: '10px', marginRight: '5px',color:'#CED3DD' }} />
+                                <SelectAllIcon style={{ marginRight: '4px', color: '#CED3DD' }} />
+                                <span  style={{color:'#4E5A6B',fontWeight:'bold'}}>2000 Sq.Ft</span>
                             </Box>
                         </Box>
                         <hr />
@@ -82,12 +81,11 @@ export default function UnitDialog() {
                             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '7px' }}>
                                 <FiBook />Handbook
                             </Box>
-                            <Typography sx={{ color: "#5078E1", fontSize: '14px' }}>View/Download Handbook</Typography>
+                            <Typography sx={{ color: "#5078E1", fontSize: '14px' }}>View/Download</Typography>
                         </Box>
                     </Box>
 
-                    {/* Right Side - Pricing Details */}
-                    <Box className="mainunit-pricing-details" flex={1} padding={2}height={'85%'}>
+                    <Box className="mainunit-pricing-details" flex={1} padding={2}height={'100%'}>
                         <Typography variant="h6" className="mainunit-pricing-title">Unit Pricing Details</Typography>
                         <Box className="mainunit-pricing-list">
                             <Box className='mainunit-pricing-names'>

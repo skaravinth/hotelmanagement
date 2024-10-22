@@ -36,21 +36,21 @@ export default function Leaddetails() {
           borderRadius: '4px',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden'
+          
+          // overflow: 'hidden'
         }}
       >
-        <Box>
+        <Box sx={{}}>
           <img
             src={Profile}
             alt="Profile"
-            style={{ height: '100px', width: '100px' }}
+            style={{  width: '75px' }}
           />
         </Box>
 
         <Box
           sx={{
-            width: '100%',
+            width: '90%',
             height: '70%',
             display: 'flex',
             flexDirection: 'column',
@@ -132,20 +132,20 @@ export default function Leaddetails() {
             paddingTop: '6%',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
-            gap: '20px'
+            gap: '17px'
           }}
         >
           {[
             { title: 'LEASE START DATE', date: '30 Jan 22' },
             { title: 'LEASE END DATE', date: '30 Jan 23' },
             { title: 'RENT START DATE', date: '30 Jan 23' },
-            { title: 'GRACE PERIOD', date: '90 Days (Beginning)' }
+            { title: 'GRACE PERIOD', date: '90 Days (Begining)' }
           ].map((item, index) => (
-            <Box key={index} sx={{ display: 'flex', flexDirection: 'column', gap: '0.3rem' }}>
+            <Box key={index} sx={{ display: 'flex', flexDirection: 'column', gap: '0rem' }}>
               <Box sx={{ fontSize: '10px', color: '#98A0AC', fontWeight: '600' }}>
                 {item.title}
               </Box>
-              <Box sx={{ fontSize: '12px', color: '#091B29', fontWeight: '600' }}>
+              <Box sx={{ fontSize: '11px', color: '#091B29', fontWeight: '600' }}>
                 {item.date}
               </Box>
             </Box>

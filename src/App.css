@@ -3,3 +3,29 @@
 	width: 100%;
 }
 
+/* App.css */
+@font-face {
+    font-family: 'NunitoSansRegular';
+    src: local('NunitoSansRegular'),
+         url('./fonts/NunitoSans-Regular.woff2') format('woff2'),
+         url('./fonts/NunitoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-size: '12px';
+}
+
+@font-face {
+    font-family: 'NunitoSansBold';
+    src: local('NunitoSansBold'),
+         url('./fonts/NunitoSans-Bold.woff2') format('woff2'),
+         url('./fonts/NunitoSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+    font-family: 'NunitoSansRegular', sans-serif;
+}
+
+.bold-text {
+    font-family: 'NunitoSansBold', sans-serif;
+}

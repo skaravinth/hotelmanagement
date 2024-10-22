@@ -115,7 +115,7 @@ export default function Unitdetails() {
         tub: 3,
         bhk: 3,
       },
-    // Add other estates here
+    
   ];
 
   const handleSelectEstate = (estate) => {
@@ -128,26 +128,26 @@ export default function Unitdetails() {
 
   const handleAddPricing = (popupState) => {
     setAddPricing(true);
-    popupState.close(); // Close popover
+    popupState.close();
   };
 
   const handleAddAminities = (popupState) => {
     setOpenAminitiesDialog(true);
-    popupState.close(); // Close popover
+    popupState.close();
   };
 
   const handleAddUtilities = (popupState) => {
     setopenUtilities(true);
-    popupState.close(); // Close popover
+    popupState.close(); 
   };
   const handleAddDiscount = (popupState) => {
     setopenDiscount(true);
-    popupState.close(); // Close popover
+    popupState.close();
   };
 
   const handleAddremove = (popupState) => {
     setopenremove(true);
-    popupState.close(); // Close popover
+    popupState.close(); 
   };
 
 
@@ -163,6 +163,18 @@ export default function Unitdetails() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  useEffect(() => {
+    const body = document.body;
+    if (addPricing || openAminitiesDialog || openUtilities || openDiscount || openremove) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'auto';
+    }
+  
+    return () => {
+      body.style.overflow = 'auto';
+    };
+  }, [addPricing, openAminitiesDialog, openUtilities, openDiscount, openremove]);
 
   return (
     <>
@@ -205,34 +217,35 @@ export default function Unitdetails() {
                       <PopupState variant="popover" popupId="demo-popup-popover">
                         {(popupState) => (
                           <Box>
-                            <Typography sx={{ display: "flex", gap: "7px" }} variant="contained" {...bindTrigger(popupState)}>
+                            <Typography sx={{ display: "flex", gap: "7px",justifyContent:'center',alignItems:'center' }} variant="contained" {...bindTrigger(popupState)}>
                               <FaPlus />
                               <Box>Customise</Box>
                             </Typography>
                             <Popover
                               {...bindPopover(popupState)}
+                              PaperProps={{ sx: { position: 'fixed' } }} 
                               anchorOrigin={{
                                 vertical: "bottom",
                                 horizontal: "center",
                               }}
                               transformOrigin={{
                                 vertical: "top",
-                                horizontal: "left",
+                                horizontal: "bottom",
                               }}
                             >
-                              <Box sx={{ p: 1, px: 2, width: "120px", fontSize: "12px", borderBottom: "1px solid #E4E8EE", pb: 1, mx: 2 }} onClick={() => handleAddPricing(popupState)}>
+                              <Box sx={{ p: 1, px: 2, width: "160px", fontSize: "11px", borderBottom: "1px solid #E4E8EE", pb: 1, mx: 2 }} onClick={() => handleAddPricing(popupState)}>
                                 Add Pricing Component
                               </Box>
-                              <Box sx={{ p: 1, px: 2, width: "120px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddAminities(popupState)}>
+                              <Box sx={{ p: 1, px: 2, width: "160px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddAminities(popupState)}>
                                 Add Amenities
                               </Box>
-                              <Box sx={{ p: 1, px: 2, width: "120px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddUtilities(popupState)}>
+                              <Box sx={{ p: 1, px: 2, width: "160px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddUtilities(popupState)}>
                                 Add Utilities
                               </Box>
-                              <Box sx={{ p: 1, px: 2, width: "120px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddDiscount(popupState)}>
+                              <Box sx={{ p: 1, px: 2, width: "160px", borderBottom: "1px solid #E4E8EE", fontSize: "12px", pb: 1, mx: 2 }} onClick={() => handleAddDiscount(popupState)}>
                                 Add Discount
                               </Box>
-                              <Box sx={{ p: 1, px: 2, width: "120px", fontSize: "12px", mx: 2 }} onClick={() => handleAddremove(popupState)}>
+                              <Box sx={{ p: 1, px: 2, width: "160px", fontSize: "12px", mx: 2 }} onClick={() => handleAddremove(popupState)}>
                                 Remove Component
                               </Box>
                             </Popover>

@@ -1,12 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { Box } from "@mui/material";
+import { Box,Dialog} from "@mui/material";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Price from '../Price/Price'
 
 const Pricing = ({ openPricingDialog, setOpenPricingDialog })=> {
+    const [pricingBox,setPricingBox]=useState(false);
+
+    const handleopenpage = () => setPricingBox(true);
     const listofpri = [
-        { sno: 1, conte: "Primary", primcolo: "#B3776D", secodcol: "#FEEAEA80" },
+        { sno: 1, conte: "Primary", primcolo: "#B3776D", secodcol: "#FEEAEA80",onclick:()=>{
+            handleopenpage()
+        } },
         { sno: 2, conte: "Secondary", primcolo: "#896DB3", secodcol: "#EDE4FE80" },
         {
             sno: 3,
@@ -114,6 +120,7 @@ const Pricing = ({ openPricingDialog, setOpenPricingDialog })=> {
 
 
     return (
+        <Dialog   open={open}>
         <Box style={containerStyle}>
             <Box sx={dialogTitleStyle}>
                 <span style={{ fontWeight: "700" }}>Pricing Table</span>
@@ -148,6 +155,8 @@ const Pricing = ({ openPricingDialog, setOpenPricingDialog })=> {
                 ))}
             </Box>
         </Box>
+        {pricingBox && <Price setPricingbox={setPricingBox}/>}
+        </Dialog>
     );
 }
 

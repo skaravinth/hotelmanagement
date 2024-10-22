@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Switch } from "@mui/material";
+import { Box, Button, Dialog, Switch } from "@mui/material";
 import img from "../../assets/image.png";
 import CloseIcon from "@mui/icons-material/Close";
 import "./AddUtilities.css";
@@ -102,6 +102,7 @@ function AmenitiPop({openUtilityDialog, setOpenUtilityDialog}) {
   ];
 
   return (
+    <Dialog open={open}>
     <Box className="amenitespopocn" sx={{marginTop:'30px'}} onClick={() => setOpenUtilityDialog(false)}>
       <Box className="pricehed" sx={{ height: "7%", border: "0px",display:'flex',gap:'240px',alignItems:'center',justifyContent:'center' }}>
         <Box sx={{ fontWeight: "700" }}>Add Utilities</Box>
@@ -176,6 +177,7 @@ function AmenitiPop({openUtilityDialog, setOpenUtilityDialog}) {
         </Box>
       </Box>
     </Box>
+    </Dialog>
   );
 }
 

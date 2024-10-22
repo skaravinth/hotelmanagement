@@ -83,16 +83,16 @@ export default function UnitDialog( {setOpenDialogDialog}) {
                             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '7px' }}>
                                 <FiBook />Handbook
                             </Box>
-                            <Typography sx={{ color: "#5078E1", fontSize: '14px' }}>View/Download Handbook</Typography>
+                            <Typography sx={{ color: "#5078E1", fontSize: '14px' }}>View/Download</Typography>
                         </Box>
                     </Box>
 
                     {/* Right Side - Pricing Details */}
-                    <Box className="mainunit-pricing-details"  sx={{height:'85%'}}>
-                    <Box sx={{display:'flex',flexDirection:'column'}}>
+                    <Box className="mainunit-pricing-details"  sx={{height:'88%',padding:'2%'}}>
+                    <Box sx={{display:'flex',flexDirection:'column',}}>
     <Typography variant="h6" className="mainunit-pricing-title">Unit Pricing Details</Typography>
     <Box className="mainunit-pricing-list" >
-        {[...Array(5)].map((_, index) => (
+        {[...Array(4)].map((_, index) => (
             <Box key={index} className="mainunit-pricing-itemss" sx={{display:'flex',flexDirection:'column'}}>
                 {/* Pricing row with the bill name and amount */}
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
@@ -103,7 +103,7 @@ export default function UnitDialog( {setOpenDialogDialog}) {
                 {/* Discount Section */}
                 <Box className="discount-input-section" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
     <Typography variant="caption" sx={{ marginRight: '10px' }}>Discount</Typography>
-    <Box sx={{ display: 'flex', gap: '0', alignItems: 'center', border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden', width: '150px' }}>
+    <Box sx={{ display: 'flex', gap: '0', alignItems: 'center', border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden',  }}>
         <input
             type="text"
             placeholder='100,000'
@@ -122,14 +122,14 @@ export default function UnitDialog( {setOpenDialogDialog}) {
     {/* Final Total Section */}
     <Box
         className="mainunit-pricing-total"
-        sx={{ border: '1px solid #ccc', padding: 1, marginTop: '30px', borderRadius: '5px', backgroundColor: '#E4E8EE', display: 'flex', justifyContent: 'space-between' }}
+        sx={{ border: '1px solid #ccc', padding: 1, marginTop: '40px', borderRadius: '5px', backgroundColor: '#E4E8EE', display: 'flex', justifyContent: 'space-between' }}
     >
         <Typography variant="body1">Final Total</Typography>
         <Typography variant="h6">$1,200</Typography>
     </Box>
 </Box>
-<Box sx={{marginTop:'40px',width:'490'}}>
-                                <Button variant="contained" color="primary"sx={{width:'480px'}}>
+<Box sx={{marginTop:'40px',width:'490',}}>
+                                <Button variant="contained" color="primary"sx={{width:'480px',height:'45px'}}>
                                 Update & Save
                                 </Button>
                             

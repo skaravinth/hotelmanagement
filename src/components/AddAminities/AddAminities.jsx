@@ -1,6 +1,6 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { IconButton, Switch, Button, Box } from "@mui/material";
+import { IconButton, Switch, Button, Box,Dialog } from "@mui/material";
 import swimming from "../../assets/aminities.png";
 import './AddAminities.css'
 import img from "../../assets/image.png";
@@ -68,59 +68,14 @@ function AmenitiPop({ openAminitiesDialog, setOpenAminitiesDialog }) {
 
 
 
-  const overlayStyle = {
-   
-    flexDirection: "column",
-
-
-    width: "500px",
-    height: "500px",
-    backgroundColor: "#FFFFFF",
-    borderRadius: "8px",
-    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    zIndex: 1000,
-    
-  };
-
-  const titleStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "16px",
-    borderBottom: "1px solid #E4E8EE",
-    fontWeight: "700",
-  };
-
-  const contentContainerStyle = {
-    padding: "16px",
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-  };
-
-  const amenityItemStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "10px",
-    border: "1px solid #E4E8EE",
-    borderRadius: "6px",
-    marginBottom: "8px",
-    backgroundColor: "#F9FAFB",
-  };
-
-  const amenityInfoStyle = {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-  };
+ 
 
   return (
     <>
 
-
-      <Box className="amenitespopocn" sx={{marginTop:'30px'}} onClick={() => setOpenAminitiesDialog(false)}>
-      <Box className="pricehed" sx={{ height: "7%", border: "0px",display:'flex',gap:'240px',alignItems:'center',justifyContent:'center' }}>
+<Dialog open={open}>
+      <Box className="amenitespopocn" sx={{marginTop:'30px'}} >
+      <Box className="pricehed" sx={{ height: "7%", border: "0px",display:'flex',gap:'220px',alignItems:'center',justifyContent:'center' }}>
         <Box sx={{ fontWeight: "700" }}>Add Aminities</Box>
         <Box
           sx={{ color: "#7C8594" }}
@@ -132,23 +87,24 @@ function AmenitiPop({ openAminitiesDialog, setOpenAminitiesDialog }) {
 
       <Box className="ammunitcon">
         <Box className="amunifon">
-          <Box className="amunitbaner" sx={{backgroundColor:'#DBF0F180'}}>
+          <Box className="amunitbaner" sx={{backgroundColor:'#FEEAEA80'}}>
             <Box className="amubancont" >
               <Box className="aligesfs" >
-               <img src={swimming} style={{color:'#6DAFB3'}} alt="" />
+               <img src={swimming} style={{color:'#B3776D'}} alt="" />
               </Box>
-              <Box style={{ fontWeight: "600" }}>
+              <Box style={{ fontWeight: "600",color:'#B3776D' }}>
                 <span style={{ fontWeight: "800" }}>05</span> Total Aminities
               </Box>
             </Box>
 
-            <Box className="amubanpri">$ 200.00</Box>
+            <Box className="amubanpri" sx={{color:'#B3776D'}}>$ 200.00</Box>
           </Box>
 
           <Box className="availaamit">Available Aminities</Box>
 
           <Box className="tooglecon">
             {amindata.map((item, index) => (
+              
               <Box className="tooglecard" key={index}>
                 <Box className="toggleimgcon">
                   <img src={img} alt="" />
@@ -175,7 +131,9 @@ function AmenitiPop({ openAminitiesDialog, setOpenAminitiesDialog }) {
                 <Box className="contswitch">
                   <Switch color="success" size="lg" variant="soft" />
                 </Box>
+                
               </Box>
+            
             ))}
           </Box>
           <Box className="updatesavcon">
@@ -193,6 +151,7 @@ function AmenitiPop({ openAminitiesDialog, setOpenAminitiesDialog }) {
         </Box>
       </Box>
     </Box>
+    </Dialog>
     </>
   );
 }

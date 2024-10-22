@@ -1,15 +1,15 @@
-.mainunit-dialog-content {
+.mainunit-dialog-contenter {
     display: flex;
     flex-direction: row; /* Default to row layout */
     gap: 16px;
-    height: 600px;
-    width: 850px;
+    height: 560px;
+    width: 840px;
      /* Space between left and right columns */
 }
 
 .mainunit-info, .mainunit-pricing-details {
     flex: 1; /* Allow both columns to grow equally */
-    padding: 16px; /* Inner padding for both sections */
+     /* Inner padding for both sections */
     /* Light background for contrast */
     border-radius: 8px; /* Rounded corners */
   /* Soft shadow for depth */
@@ -71,5 +71,11 @@
   
     border-bottom: 1px solid #ccc; /* Divider for items */
 }
-
+.mainunit-pricing-totals {     
+    display: flex;     
+    justify-content: space-between;     
+    font-weight: bold;     
+    margin-top: 8px; 
+    padding-top: 8px; 
+}
 

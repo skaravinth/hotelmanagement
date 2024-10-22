@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Grid from '@mui/material/Grid2'; // Import Grid correctly
-import Typography from '@mui/material/Typography'; // Import Typography correctly
+import Typography from '@mui/material/Typography';
 import Sidebar from '../components/Sidebar';
 import AppBar from '../components/Appbar/Appbar';
 import { Box ,Button} from '@mui/material';
@@ -31,27 +31,30 @@ function Home() {
               <Box sx={{marginTop:'10px',marginRight:'2%'}}><Dropdown/></Box>
                 
               </Box>
-                <Box  bgcolor="#F5F7FA" sx={{padding:"1%",height:"84%",border:'0 0 5px 5px'}}>
-                  <Box bgcolor="#F5F7FA" sx={{margin:"1%",width:"98%",height:"100%",border:'0 0 5px 5px'}}>
-                  <Box  bgcolor="#ffffff" sx={{width:"98.61%",height:"10%",display:'flex',borderRadius:'5px 5px 0 0',color:'#5078E1',justifyContent:'start',alignItems:'center',paddingLeft:'20px',fontSize:'14px'}}>
+              <Box bgcolor="#F5F7FA" sx={{padding:"1%",height:"92%",border:'0 0 5px 5px'}}>
+                <Box  bgcolor="#F5F7FA" sx={{padding:"1%",height:"93%"}}>
+                 
+                  <Box  bgcolor="#ffffff" sx={{ width:'1388px',height:"10%",display:'flex',borderRadius:'5px 5px 0 0',color:'#5078E1',justifyContent:'start',alignItems:'center',paddingLeft:'20px',fontSize:'14px'}}>
                     Add Contact &gt; Lead Details &gt; Preview and Create Lead &gt; Quantity Details &gt;<Box sx={{backgroundColor:'blue',display:'flex',justifyContent:'center',alignItems:'center',height:'20px',width:'20px',borderRadius:'50%',color:'white',marginLeft:'3px',marginRight:'3px'}}>4</Box>Preview and Create
                   </Box>
-                  <Box bgcolor="white" sx={{width:'90.7%',position:'absolute',marginTop:'485px',zIndex:'1000',height:'90px',display:'flex',flexDirection:'row',justifyContent:'space-between',border:'0 0 5px 5px'}}>
+                  
+                  <Box sx={{width:'1388px',height:"90%",display:"flex"}}>
+                    <Box bgcolor="#ffffff" sx={{height:"89%",width:"31%"}}><Leaddetails/></Box>
+                    <Box bgcolor="#f6f8fa" sx={{height:"90%",width:"41%"}} ><Unitdetails /></Box>
+                    
+                    <Box bgcolor="#ffffff" sx={{height:"90%",width:"29.7%",padding:'16px'}}> <Box marginBottom={'20px'}>  <Typography>Quatation</Typography></Box><Quantity/></Box>                    
+                    <Box bgcolor="white" sx={{  width:'1388px' ,position:'absolute',zIndex:'1000',height:'90px',marginTop:'420px',display:'flex',flexDirection:'row',justifyContent:'space-between',borderRadius:'0 0 10px 10px'}}>
                     <Box sx={{marginLeft:'20px'}}><Button sx={{height:'40px',width:'100px',border:'1px solid #E4E8EE',marginTop:'15px'}}>Previous</Button></Box>
                     <Box sx={{marginTop:'20px',display:'flex',gap:'20px'}}>
                       <Button sx={{height:'40px',width:'75px',border:'1px solid #E4E8EE'}}>Back</Button>
                       <Button sx={{height:'40px',width:'143px',backgroundColor:'blue',color:'white',fontSize:'12px',marginRight:'20px'}}>Create Question</Button>
                     </Box>
                   </Box>
-                  <Box sx={{width:"100%",height:"90%",display:"flex"}}>
-                    <Box bgcolor="#ffffff" sx={{height:"100%",width:"30%"}}><Leaddetails/></Box>
-                    <Box bgcolor="#f6f8fa" sx={{height:"100%",width:"40%"}} ><Unitdetails /></Box>
-                    
-                    <Box bgcolor="#ffffff" sx={{height:"100%",width:"30%",padding:'16px'}}> <Box marginBottom={'20px'}>  <Typography>Quatation</Typography></Box><Quantity/></Box>                    
-                   
                   </Box>
-                  
-                  </Box>
+                
+              
+                
+                </Box>
                 </Box>
                 {/* <Grid container bgcolor="red" boxShadow="0px 0px 16px #00000014" sx={{height:"93%",margin:"2%"}}>
                     <Grid item bgcolor="#FFFFFF" sx={{height:"9%",width:"80%",borderTopRightRadius:"12px",borderTopLeftRadius:"12px"}}>sget</Grid>

@@ -20,20 +20,20 @@ function DropdownComponent() {
         onChange={handleChange}
         sx={{
           '& .MuiOutlinedInput-root': {
-            borderRadius: '10px',  // Rounded corners
-            backgroundColor: 'white', // White background
+            borderRadius: '10px', 
+            backgroundColor: 'white', 
             minHeight: '32px',
-            minWidth:'166px' // Reduced height of the dropdown
+            minWidth:'166px' 
           },
           '& .MuiSvgIcon-root': {
-            color: '#3b5998', // Custom color for the arrow icon
+            color: '#3b5998', 
           },
           '& .MuiSelect-select': {
             padding: '5px 10px',
             minHeight: '25px',
             minWidth:'166px',
             backgroundColor:'#F5F7FA',
-            border:'1px solid #E4E8EE' // Reduced padding inside the select box
+            border:'1px solid #E4E8EE' 
           }
         }}
       >
